@@ -16,7 +16,6 @@ import { createStore, compose } from "redux";
 import { Provider, connect } from "react-redux";
 import { handleActions, createAction } from "redux-actions";
 import { createSelector } from "reselect";
-import { axios } from "axios";
 
 // ---- Utilities ---- //
 const arrInRange = N => {
@@ -146,7 +145,7 @@ class App extends Component {
       });
     });
 
-    fetch("http://localhost:7000/", {
+    fetch("http://localhost:5000/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
